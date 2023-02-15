@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+body {
+  background-image: url(./Untitled\ design.png);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.sponge_eyes > * {
+  transform-origin: top;
+}
+.circle {
+  --size: 10px;
+  height: var(--size);
+  width: var(--size);
+  background-color: black;
+  border-radius: 100%;
+}
+
+.patrick_eyes {
+  --size: 30px;
+  height: var(--size);
+  width: var(--size);
+  transform-origin: center;
+}
+
+.outer_sponge_eye {
+  --size: 40px;
+  height: var(--size);
+  width: var(--size);
+  background-color: #0a7da9;
+  border-radius: 100%;
+  border: 2px solid black;
+}
+
+.outer_sponge_eye::after {
+  content: "";
+  --size: 10px;
+  height: var(--size);
+  width: var(--size);
+  background-color: black;
+  border-radius: 100%;
+  position: absolute;
+  left: 17px;
+  top: 20px;
+  transform-origin: bottom;
+}
+.outer_patrick_eye {
+  --size: 40px;
+  height: var(--size);
+  width: var(--size);
+  /* background-color: #0a7da9; */
+  /* border-radius: 100%; */
+  /* border: 2px solid black; */
+}
+
+.outer_patrick_eye::after {
+  content: "";
+  --size: 10px;
+  height: var(--size);
+  width: var(--size);
+  background-color: black;
+  border-radius: 100%;
+  position: absolute;
+  left: 15px;
+  top: 26px;
+  transform-origin: bottom;
+}
+
+#cursor {
+  position: absolute;
+}
+#cursor > img {
+  height: 64px;
+}
